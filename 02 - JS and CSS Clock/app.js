@@ -11,7 +11,13 @@ function setDate() {
 
   const mins = now.getMinutes();
   const minsDegrees = ((mins / 60) * 360 ) + 90;
-  hourHand.style.transform = `rotate(${minsDegrees}deg)`
+  minsHand.style.transform = `rotate(${minsDegrees}deg)`
+
+  const hour = now.getHours();
+  const hourDegrees = ((hour / 60) * 360 ) + 90;
+  hourHand.style.transform = `rotate(${hourDegrees}deg)`
+  console.log(hour + ':' + mins + ':' + seconds);
+  
 }
 
 setInterval(setDate, 1000);
